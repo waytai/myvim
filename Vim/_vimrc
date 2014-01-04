@@ -107,7 +107,37 @@ au BufWritePre * let &bex='-'.strftime("%Y%m%d-%H%M%S").'.bak'
 "NerdTree
 map <F3> :Tlist<CR>
 
-"let the vim big
+"let the vim big , just for windows
 nmap sx <ESC>:simalt~x<CR>
 nmap sr <ESC>:simalt~r<CR>
 nmap sn <ESC>:simalt~n<CR>
+
+"let the position in current
+nmap sm <ESC> :cd %:p:h <CR>
+
+:command Gdir24 :cd d:\PopoSErver\trunk\2.4\popocloud
+
+command Goto :call Goto()
+
+function! Goto()
+	:cd d:\PopoServer
+endfunction
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
