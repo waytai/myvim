@@ -35,7 +35,7 @@ set ambiwidth=double
 
 "允许退格键删除和tab操作
 set smartindent
-set expandtab
+"set expandtab
 set tabstop=4
 set softtabstop=4
 set shiftwidth=4
@@ -103,6 +103,10 @@ set tags+=D:\PopoServer\trunk\PC\Tools\Python27\tags
 set backupext=.bak
 set backupdir=D:\Source\Core\bakdir
 au BufWritePre * let &bex='-'.strftime("%Y%m%d-%H%M%S").'.bak'
+
+"根据文件类型决定缩进
+filetype indent on
+autocmd filetype make set noexpandtab
 
 "NerdTree
 map <F3> :Tlist<CR>
